@@ -12,12 +12,9 @@ app.use((_: Request, response: Response, next: NextFunction) => {
   next();
 });
 
-// get info about video and send it to client
 app.get('/info', async (request: Request, response: Response) => {
   const params = request.query;
   const videoUrl: string | undefined = params.videoUrl as string | undefined;
-
-  console.log('Searching info for video: ', videoUrl);
 
   if (!videoUrl) {
     response.status(400).send('Bad Request');
@@ -35,8 +32,6 @@ app.get('/info', async (request: Request, response: Response) => {
 app.get('/download', (request: Request, response: Response) => {
   const params = request.query;
   const videoUrl: string | undefined = params.videoUrl as string | undefined;
-
-  console.log('Downloading video: ', videoUrl);
 
   if (!videoUrl) {
     response.status(400).send('Bad Request');
