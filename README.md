@@ -1,4 +1,4 @@
-# YouTube Downlaoder server
+# YouTube Downloader server
 
 A simple express server used to download youtube videos in audioonly mode using [ytdl-core](https://github.com/fent/node-ytdl-core).
 Created as an external API for my [Ionic YouTube Downloader App](https://github.com/riccardoFasan/ionic-youtube-downloader).
